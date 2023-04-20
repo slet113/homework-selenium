@@ -197,7 +197,7 @@ public class SeleniumTest {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Слеткова Екатерина");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79204700824");
         driver.findElement(By.tagName("button")).click();
-        String expected = " соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй";
+        String expected = "Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй";
         String actual = driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid .checkbox__text")).getText().trim();
         assertEquals(expected, actual);
     }
